@@ -4,9 +4,13 @@ A Python script for exporting highlights from one Readwise account and uploading
 
 ## Features
 
-- Use Readwise Export API to retrieve highlights.
-- Use Readwise Import API to upload highlights.
+- Use [Readwise API](https://readwise.io/api_deets) to retrieve and upload highlights.
+- Readwise Reader info is also supported. However, highlights in Reader are **not** supported due to the limitation of [Readwise Reader API](https://readwise.io/reader_api). Tell me if you have any ideas to fix this.
 - **Your metadata of highlights will be preserved**.
+
+## Disclaimer
+
+Please verify the data integrity after using this script. The author is not responsible for any data loss or damage that may occur during the sync process. Use this script at your own risk.
 
 ## Usage
 
@@ -18,14 +22,7 @@ pip install -r requirements.txt
 
 ### Configuration
 
-1. Open the `main.py` file and locate the following section:
-
-    ```python:main.py
-    source_token = '<YOUR_SOURCE_TOKEN>'
-    target_token = '<YOUR_TARGET_TOKEN>'
-    ```
-
-2. Replace `<YOUR_SOURCE_TOKEN>` and `<YOUR_TARGET_TOKEN>` with your source and target Readwise API Tokens, which can be obtained from [Readwise](https://readwise.io/access_token)
+Open the `config.cfg` file and fill in your source and target Readwise API Tokens, which can be obtained from [Readwise](https://readwise.io/access_token).
 
 ### Run the Script
 
